@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AcGit.cc  落木实验室</title>
+<!-- Bootstrap -->
+<link href="http://cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="http://cdn.bootcss.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9] 
+<script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<script src="http://cdn.bootcss.com/spin.js/2.0.1/spin.js"></script>
+<script src="js/sco.modal.js"></script>
+
+<style type="text/css">
+  body {
+  font-family: "Microsoft YaHei" ! important;
+  font-size: 14px;
+  line-height: 150%;
+  color: #222;
+  background-color: #FFFFFF;
+  padding-top: 50px;
+	}
+  span {
+ display: inline-block;
+	}
+</style>
+</head>
+
+<body >
+<!--loading模态框-->
+<div class="modal fade" id="wait" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h1 class="text-center" >AcGit.cc</h1>
+				<h4 class="text-center" >技术宅改变世界</h4>
+			</div>
+			<div class="modal-body">
+				<div class="progress">
+					<div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+					</div>
+				</div>
+				<h5 class="text-center" >&nbsp;Loading...</h5>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" >
+	var load = $.scojs_modal({target:"#wait"});
+	load.show();
+	window.onload=function(){load.close();};
+</script>
+<div class="container-fluid">
+
+<!--导航条-->
+<div class="row"  >
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation"  >
+		<div class="container-fluid" >
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" >
+				<span class="sr-only">AcGit.cc</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			 	</button>
+				<a class="navbar-brand" href="index.html">AcGit.cc</a>
+			</div>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li><a target="_blank" href="https://onedrive.live.com/redir?page=view&amp;resid=142CC1BA66A76019!596&amp;authkey=!AMoAzVnKNEICR2w">学习笔记(墙外)</a></li>
+					<li><a target="_blank"  href="http://blog.liyawei.cn/">博客</a></li>
+					<li><a target="_blank" href="https://github.com/chiruom/">Github</a></li>
+					<li><a target="_blank" href="403.html">私の日记</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">应用<span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+						<li><a target="_blank" href="xss_payload_tester/index.html">XSS Payload 测试机</a></li>
+                            <li><a target="_blank" href="danmu/index.html">jQuery弹幕插件</a></li>
+						<li class="divider"></li>
+
+						</ul>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a target="_blank" href="v1/index.html">回到旧版</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">友情链接 <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a target="_blank" href="http://liuzx.org">liuzx.org</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">联系我 <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a target="_blank" href="http://weibo.com/u/3911382082/">微博</a></li>
+							<li><a target="_blank" href="http://www.wooyun.org/whitehats/秋风落木">乌云</a></li>
+							<li class="divider"></li>
+							<li><a target="_blank" href="http://space.bilibili.com/5591810">BiliBili</a></li>
+							<li class="divider"></li>
+							<li><a target="_blank" href="Mailto:root@liyawei.cn">给我发邮件</a></li>
+						</ul>
+					</li>
+			  </ul>
+			</div>
+		 </div>
+	</nav>
+</div>
+
+<!--轮播-->
+ <div class="row">
+	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+	  <!-- Indicators -->
+	  <ol class="carousel-indicators">
+		<li  data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+		<li  data-target="#carousel-example-generic" data-slide-to="1"></li>
+		<li  data-target="#carousel-example-generic" data-slide-to="2"></li> 
+		<li  data-target="#carousel-example-generic" data-slide-to="3"></li> 
+		<li  data-target="#carousel-example-generic" data-slide-to="4"></li> 
+	  </ol>
+	  <!-- Wrapper for slides -->
+	  <div class="carousel-inner" role="listbox">
+		<div class="item active">
+			<img src="http://liyawei.sinaapp.com/img/top.jpg" alt="">
+			<div class="carousel-caption" >
+				<h1>AcGit.cc</h1>
+				<p>技术宅拯救世界</p>
+			</div>
+		</div>
+		<div class="item">
+		  <img src="http://liyawei.sinaapp.com/img/top_2.jpg" alt="">
+		  <div class="carousel-caption">
+			<h1>落木实验室</h1>
+			  <p>爱科技，爱二次元！</p>
+		  </div>
+		</div>
+		<div class="item">
+		  <img src="http://liyawei.sinaapp.com/img/top_3.jpg" alt="">
+		  <div class="carousel-caption">
+			<h1>LiYawei.cn</h1>
+			<p>自分らしく生きること!！</p>
+		  </div>
+		</div>
+		<div class="item">
+		  <img src="http://liyawei.sinaapp.com/img/top_4.jpg" alt="">
+		  <div class="carousel-caption">
+			<h1>AcGit.cc</h1>
+			<p>看庭前花开花落,荣辱不惊;望天上云卷云舒,去留无意!</p>
+		  </div>
+		</div>
+		<div class="item">
+		  <img src="http://liyawei.sinaapp.com/img/top_5.jpg" alt="">
+		  <div class="carousel-caption">
+			  <h1>黑琴一生推</h1>
+			  <p>とある科学の超电磁炮</p>
+		  </div>
+		</div>
+	  </div>
+	<!-- Controls -->
+	  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+		<span class="glyphicon glyphicon-chevron-left"></span>
+		<span class="sr-only">Previous</span>
+	  </a>
+	  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+		<span class="glyphicon glyphicon-chevron-right"></span>
+		<span class="sr-only">Next</span>
+	  </a>
+
+	</div>  
+</div>
+	
+<!--初春佐天-->
+<div class="row" style="color:#222;background:#FFFFFF;text-align:center;margin-left:auto; margin-right:auto;">
+	<div class="col-sm-12 ">
+		 <h4 style="LINE-HEIGHT:170%">
+			<p class="text-center">
+				<br><br>
+				响き合う 愿いが今、目覚めてく&nbsp;&nbsp;
+				譲れない未来のために<br>
+				巡り逢う 运命を超えたその先に&nbsp;&nbsp;
+				この想い辉くから<br>
+				ここじゃない未来に想い托してみては&nbsp;&nbsp;
+				强さの本当の意味を搜し続けてた<br>
+				ありのままの痛みを 受け入れるその意味を&nbsp;&nbsp;
+				明日へ 走り続ける 君に知った<br>
+				巡りゆく 景色が今、 流れてく&nbsp;&nbsp;
+				手缲り寄せた世界の先<br>
+				降り注ぐ シグナルを躰で感じて&nbsp;&nbsp;
+				解き放つ今全てを<br>
+				Just truth in my heart いつだって迷わないよ&nbsp;&nbsp;
+				消せない想いがあるから<br>
+				解き明かす 真実から 瞳を逸さずに&nbsp;&nbsp;
+				I'll reach the next stage to realize all.<br>
+				远く感じてた 君が走る背中を&nbsp;&nbsp;
+				いつからだろう こんなにも近くに感じる<br>
+				不安隠し切れずに 迫る空を见上げた&nbsp;&nbsp;
+				伤ついた记忆 いつか乗り越えるよ<br>
+				憧れは 能力を今 呼び起こす&nbsp;&nbsp;
+				守りたいものがあるから<br>
+				巡りゆく 景色胸に 駆け上がるだけ&nbsp;&nbsp;
+				痛みは风に消えてく<br>
+				Believe in Judgelight 运命さえ 击ち抜いて&nbsp;&nbsp;
+				夜明けをこの手で造ろう<br>
+				変えていく勇気と変わらない心で&nbsp;&nbsp;
+				I believe myself and precious emotion<br>
+				打ち砕く この想いで！&nbsp;&nbsp;
+				始まりの 光の中 誓い合う<br>
+				果てなき闇を裁くこと&nbsp;&nbsp;
+				恐れてた 孤独の涡 溺れることに<br>
+				だけどもう振り向かない&nbsp;&nbsp;
+				巡りゆく 景色が今 流れてく<br>
+				手缲り寄せた世界の先&nbsp;&nbsp;
+				降り注ぐ シグナルを躰で感じて<br>
+				解き放つ今全てを&nbsp;&nbsp;
+				Just truth in my heart いつだって迷わないよ<br>
+				消せない想いがあるから&nbsp;&nbsp;
+				解き明かす 真実から 瞳を逸さずに<br>
+				I'll reach the next stage to realize all.&nbsp;&nbsp;
+				确かな绊信じて<br><br>
+			<p>
+		</h4>
+		 <img style="text-align:center;margin-left:auto; margin-right:auto;" src="http://liyawei.sinaapp.com/img/wel.jpg" class="img-responsive"  >
+		<h4><br></h4>
+	</div>
+</div>
+
+<!--黑子美琴-->
+<div class="row" style="color:#777;background:#333;  margin-top: 15px; ">
+	<div class="col-xs-1 col-md-1"></div>
+	<div class="col-xs-10 col-md-3 " style=" text-align:center margin-right:auto ; margin-left: auto; ">
+		<br><br>
+		<img src="http://liyawei.sinaapp.com/img/head.jpg"  style="text-align:center;margin-left:auto; margin-right:auto;" class="img-responsive" >            
+	</div>
+	<div class="col-xs-1 col-md-1"></div>
+	<div class="col-xs-12 col-md-6 " style="margin-right:15px;margin-bottom: 15px; margin-left: 15px; ">
+		<h3><p style="color:#7F8C8D">Ruiko Li</p></h3>
+		<h4>
+			<p style="color:#27AE60">魔法名~chiruom71452</p>
+			<p style="color:#2980b9">在校学生</p>
+			<p style="color:#F39C12">http://liyawei.cn</p>
+			<p style="color:#C0392B">root@liyawei.cn</p>
+			<p style="color:#8E44AD">学园都市第七学区	常盘台中学学生寮 207号室</p>
+		</h4>
+		<h3 style="LINE-HEIGHT:170%">
+			<span class="label label-primary" style="background-color:#E67E22">二次元</span>
+			<span class="label label-primary" style="background-color:#16A085">程序员</span>
+			<span class="label label-success" style="background-color:#2980B9">hentai</span>
+			<span class="label label-info" style="background-color:#8E44AD">中二病</span>
+			<span class="label label-warning" style="background-color:#2C3E50">宅</span>
+			<span class="label label-danger" style="background-color:#F39C12">蛇精病</span>
+			<span class="label label-default" style="background-color:#D35400">攻城狮</span>
+			<span class="label label-danger" style="background-color:##C0392B">永远的十七岁</span>
+			<span class="label label-success" style="background-color:#8E44AD">二禁恋</span>
+			<span class="label label-primary" style="background-color:#E67E22">极客</span>
+			<span class="label label-warning" style="background-color:#2ECC71">幼儿体型</span>
+			<span class="label label-info" style="background-color:#E74C3C">双重人格</span>
+		</h3>
+		<br>
+	</div>
+	<div class="col-xs-0 col-md-1"></div>
+</div>
+<!--版权信息-->
+<div class="row" >
+<!--
+	<div class="col-xs-12 col-md-12" style="text-align:center;">
+		<br>
+		<audio  loop="loop" controls="controls" >
+			<source src="http://liyawei.sinaapp.com//bgm/bgm.mp3" type="audio/mpeg">
+		</audio>
+	</div> 
+-->
+	<div class="col-xs-12 col-md-12">
+		<h3 style="text-align:center;">©AcGit.cc 2015</h3>  
+	</div>
+</div>
+</div>
+</body>
+</html>
